@@ -1,0 +1,21 @@
+<ul class="list-group">
+	<div id="right-bar">
+		<a class="right-settings btn-serieclose" href="#close">&times;</a>
+		<div class="right-logo" style="margin-bottom:10px; padding-left:5px;">
+				<div class="right-text" style="padding:7px 15px 11px;">{{ serie.nombre }}</div>
+		</div>
+	</div>
+
+	<ol type="1">
+	{% for capitulo in capitulos %}
+		<li class="list-group-item play-item">
+			<span class="badge">
+				<span class="label label-danger">Temporada {{ capitulo.temporada }}</span>
+			</span>
+			<button type="button" href="#" class="btn-capitulos btn-capitulo" value="{{ capitulo.idcapitulo }}">
+				 <div class="badge-icon" style="float:left;"><span class="fa fa-play-circle" style="margin-right:15px;"> </span></div>{{ capitulo.nom_capitulo }}
+			</button>
+		</li>
+	{% endfor %}
+	</ol>
+</ul>

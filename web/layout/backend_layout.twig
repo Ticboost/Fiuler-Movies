@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}Backend{% endblock %} - Fiuler</title>
+	<link rel="stylesheet" type="text/css" href="{{ assets }}css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="{{ assets }}css/f-movies.css">
+	<link rel="stylesheet" type="text/css" href="{{ assets }}css/font-awesome.min.css">
+	<script src="{{ assets }}js/jquery-2.2.4.min.js" crossorigin="anonymous"></script>
+    <script src="{{ assets }}js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="navbar-backend">
+	<div id="head-bar">
+		<a class="head-settings" href="#Settings">⋮</a>
+		<a class="head-logo" href="?Home"><img src="{{ assets }}css/img/logo.svg" width="50" height="48">
+			<span>Fiuler Movies</span>
+		</a>
+		<div class="head-modes">
+			<a class="head-mode sites active" href="#Sites">Administrador</a>
+			<a class="head-mode files" href="/homepage">Homepage</a>
+			<a class="head-mode files" href="/backend/close">Salir</a>
+		</div>
+	</div>
+		<div id="navbar-list">
+			<h2 class="connected">Opciones de administrador</h2>
+			<div class="navbar-list">
+			<div class="list-site">
+				<div class="list-circle" style="color: hsl(181,40%,50%)">•</div>
+				<a class="list-inner" href="/backend/users">
+					<span class="list-title">Usuarios</span>
+						<div class="list-details">
+							<span class="modified">
+								<div class="fa fa-user-o"></div>
+							</span>
+						</div>
+				</a>
+				<a class="list-settings" href="#">⋮</a>
+			</div>
+			<div class="list-site">
+				<div class="list-circle" style="color: hsl(181,40%,50%)">•</div>
+				<a class="list-inner" href="/backend/movies">
+					<span class="list-title">Peliculas</span>
+						<div class="list-details">
+							<span class="modified">
+								<div class="fa fa-file-movie-o"></div>
+							</span>
+						</div>
+				</a>
+				<a class="list-settings" href="#">⋮</a>
+			</div>
+		</div>
+	</div>
+	</div>
+	{% block content %}{% endblock %}
+
+</body>
+</html>

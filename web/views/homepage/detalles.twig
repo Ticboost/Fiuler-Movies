@@ -1,0 +1,49 @@
+<div style="background: url('web/assets/img/{{ movie.portada }}') no-repeat; background-attachment: fixed; background-size: 100%; height:100%" class="container-fluid">
+    <button type="button" id="trailer-close" class="btn btn-movies btn-close btn-fixed" role="button">
+		<span class="fa fa-times fa-2x"></span>
+	</button>
+	<div class="col-md-4" style="background: rgba(0, 0, 0, 0.5); height:370px;">
+		<h1 style="font-weight:lighter;">{{ movie.nombre }}</h1><br>
+		<h5 style="font-weight:lighter;">{{ movie.sinopsis }}</h5>
+		<div class="detalles-movie">
+			<h5  style="font-weight:lighter;">
+				<span class="fa fa-assistive-listening-systems"></span> {{ detalles[0].idioma }}  
+				<span class="fa fa-calendar-check-o"></span> {{ movie.prod_ano }}
+			</h5>
+			<h4><span class="fa fa-eye"></span> {{ detalles[0].numReproducion }} </h4>
+		</div>
+			<h5><b><span class="fa fa-play"></span> Reproducir contenido en</b></h5>
+			<button type="button" class="btn btn-info movie" value="{{ movie.idpelicula }}">
+				<span class="fa fa-television"></span> {{ detalles[0].calidad }}
+			</button>
+			<button type="button" class="btn btn-info trailer" value="{{ movie.idpelicula }}">
+				<span class="fa fa-television"></span> Trailer
+			</button>
+		</div>
+	<div class="col-md-8" style="background: rgba(0, 0, 0, 0.18); padding:0px;">
+	
+	<div class="video-detalles" style="text-align: center; font-size:30px;">
+	<div class="detalles-w">
+		<button type="button" class="btn-movies movie play" value="{{ movie.idpelicula }}"><span class="fa fa-play-circle fa-5x"></span></button>
+		</div>
+		
+	</div>
+		<div class="rep-movie" style="display:none; margin-bottom: -5px;"></div>
+		<div class="rep-trailer" style="display:none; margin-bottom: -5px;"></div>
+	</div>
+
+	</div>
+<section class="regular slider-detalles" style="position:fixed;">
+	{% for movie in movies %}
+	<div>
+		<div class="thumbnail">
+			<button class="btn-movies detalles-info" type="button" value="{{ movie.idpelicula }}" role="button">
+				<img src="{{ assets }}img/{{ movie.imagen }}" alt="..." style="max-height:260px; margin-top:10px;">
+			</button>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+
+
+

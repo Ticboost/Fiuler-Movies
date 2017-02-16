@@ -1,0 +1,15 @@
+
+<div class="container-fluid">
+	<div class="text-fluid">
+		<h2 class="text-style"><span class="fa fa-superpowers"></span> Resultados</h2>
+	</div>
+<section class="regular slider-search" >
+{% for movie in movies %}
+	<div> 
+		<div class="thumbnail">
+			<button style="width:100%;" class="btn-movies search-detalles" type="button" value="{{ movie.idpelicula }}" role="button"><img src="{{ assets }}img/{{ movie.imagen }}" alt="..." style="max-height:260px;"></button>
+		</div>
+	</div>
+{% endfor %}
+</section>
+</div>

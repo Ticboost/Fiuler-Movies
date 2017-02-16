@@ -1,0 +1,27 @@
+{% extends "layout/default_layout.twig" %}
+
+{% block stylesheet %}
+<link rel="stylesheet" type="text/css" href="{{ assets }}css/home.css">    
+{% endblock %}
+
+{% block body %}
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="inner cover">
+            <div class="cover-heading">Error 404</div>
+            <p class="text-cover">Esta url no existe te has perdido regresa a fiuler y disfruta de su contenido</p>
+            <p class="lead">
+              <a href="homepage" class="btn btn-lg btn-default">Volver a Fiuler</a> 
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+{% endblock %}

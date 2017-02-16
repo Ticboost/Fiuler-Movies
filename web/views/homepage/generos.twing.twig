@@ -1,0 +1,21 @@
+<!--Generos y series todavia en implementacion beta 0.10 rev 1
+<div class="container-fluid">
+	<div class="text-fluid">
+		<h2 class="text-style"><span class="fa fa-tags"></span> Generos</h2>
+	</div>
+<section class="regular slider">
+	{% for genero in generos %}
+	<div> 
+		<div class="thumbnail">
+			<button class="btn-movies btn-serie" type="button" value="{{ serie.idserie }}" role="button" style=" background-color:rgba(0, 0, 0, 0.56); width:100%;">
+
+			<img src="{{ assets }}icon/{{ genero.nombre }}.svg" alt="..." style="height:179px;">
+			<div class="text-genero">
+				{{ genero.nombre }}
+			</div>
+			</button>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+</div>-->

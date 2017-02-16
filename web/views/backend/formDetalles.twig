@@ -1,0 +1,51 @@
+{% extends "layout/backend_layout.twig" %}
+
+{% block content %}
+<div class="container-fluid" style="padding-left: 400px; padding-right:0;">
+<form method="post" action="/backend/newUrl">
+	<div class="col-md-7">
+	<div class="text-fluid">
+		<h2 class="text-style"><span class="fa fa-play"></span> URL DE VIDEO</h2>
+	</div>
+		<div class="input-portada-textlow">
+			<h4>URL</h4>
+				<input type="hidden" name="idpelicula" value="{{ detalles.idpelicula }}">
+				<input type="hidden" name="idvideo" value="{{ id }}">
+				<input type="hidden" name="fecha" value="{{ "now"|date("Y/m/d") }}">
+				<input type="text" class="form-control" name="url" placeholder="http://..." required>
+				<p>Ingresa la url de la pelicula que vas a incrustar</p>
+			</div>
+		<div class="input-portada-textlow">
+			<h4>Estado</h4>
+				<select class="form-control" name="estado">
+					<option value="ACTIVE">Activo</option>
+					<option value="DEACTIVATE">Desactivado</option>
+				</select>
+			</div>
+	  </div>
+	  <div class="col-md-5">
+	  	<div class="text-fluid">
+			<h2 class="text-style">&nbsp;</h2>
+		</div>
+		<div class="input-portada-textlow">
+				<h4 class="col-sm-4"><input type="radio" name="calidad" value="HD" required> HD</h4>
+				<h4 class="col-sm-4"><input type="radio" name="calidad" value="SD" required> SD</h4>
+				<h4 class="col-sm-4"><input type="radio" name="calidad" value="DVD" required> DVD</h4>
+			
+		</div>
+
+		<div class="input-portada-textlow">
+				<select class="form-control" name="idioma">
+					<option value="Spanish(Español)">Español (España)</option>
+					<option value="Spanish(Mexico)">Español (Mexico)</option>
+					<option value="English(SUB ESP)">Ingles (SUB ESP)</option>
+				</select>
+			</div>
+		</div>
+  	
+  	<div class="col-md-7" style="margin-bottom:25px;">
+	<button class="btn btn-primary" name="newUrl" value="true">Finalizar</button>
+	</div>
+	</form>
+	</div>
+{% endblock %}

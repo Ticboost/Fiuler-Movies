@@ -1,0 +1,35 @@
+{% extends "layout/backend_layout.twig" %}
+
+{% block content %}
+<div class="container-fluid" style="padding-left: 400px; padding-right:0;">
+	<div class="right-logo">
+		<div class="right-text">Usuario nuevo</div>
+	</div>
+</div>
+<div class="container-fluid" style="padding-left: 400px; padding-right:0;">
+<form method="post" action="/backend/newUser">
+<div class="col-sm-8">
+	<div class="input-portada-textlow">
+		<label class="col-sm-2 control-label">Email</label>
+			<input type="hidden" name="id" value="{{ id }}">
+			<input type="email" class="form-control" name="email" placeholder="username@example.com" value="{{user.email}}" required>
+	</div>
+	<div class="input-portada-textlow">
+		<label class="col-sm-2 control-label">Contraseña</label>
+			<input type="password" class="form-control" name="password" placeholder="{{user.contrasena}}" required>
+	</div>
+	<div class="input-portada-textlow">
+		<label class="col-sm-2 control-label">Perfil</label>
+			<select name="perfil" class="form-control">
+			  <option value="{{user.perfil}}">--Seleccione su perfil--</option>
+			  <option value="OPERADOR">Operador</option>
+			  <option value="USER_PREMIUM">Usuario Premium</option>
+			  <option value="ADMIN">Administrador</option>
+			</select>
+		</div>
+
+  		<button type="submit" class="btn btn-primary" name="newUser" value="true">Añadir Usuario</button>
+	</div>
+</form> 
+</div>	    
+{% endblock %}

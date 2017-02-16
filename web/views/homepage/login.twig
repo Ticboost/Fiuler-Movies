@@ -1,0 +1,29 @@
+{% extends "layout/default_layout.twig" %}
+
+{% block body %}
+{% if error %}
+<div class="alert alert-danger alert-dismissable fade in">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>¡Error!</strong> email o contraseña incorrecta, intenta nuevamente
+</div>
+{% endif %}
+
+<div class="c-login">
+	<div class="b-login">
+	  <div class="text-fluid">
+		<h2 class="text-style">Iniciar sesion</h2>
+	 </div>
+	  <form class="form-signin" method="post" action="login">
+	  <div class="input-group">
+	    <span class="input-group-addon" id="sizing-addon2"><span class="fa fa-envelope-o" aria-hidden="true"></span></span>
+	    <input type="email" class="form-control" placeholder="Username" aria-describedby="sizing-addon2" name="user_name">
+	  </div>
+	  <div class="input-group">
+	    <span class="input-group-addon" id="sizing-addon2"><span class="fa fa-key" aria-hidden="true"></span></span>
+	     <input type="password" class="form-control" placeholder="Password" aria-describedby="sizing-addon2" name="password">
+	  </div>
+	    <button class="btn btn-info btn-lg btn-block" type="submit" name="login" value="true">Entrar</button>
+	</form>
+	</div>
+</div>
+{% endblock %}

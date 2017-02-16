@@ -1,0 +1,1074 @@
+/*================= CUERPO DEL DELITO =================*/
+
+html, body {
+  height: 100%;
+  background-color: #121314;
+}
+
+body {
+  color: #fff;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+}  
+
+/*================= LINKS =================*/
+
+a, a:focus, a:hover {
+  color: #fff;
+  outline: none;
+  border: none;
+}
+
+
+/*================= BARRA SUPERIOR =================*/
+
+.logo_img{
+    width: 120px;
+    height: 44px;
+}
+
+.head-bar {
+  background-color: #1c1c1f;
+  width: 100%;
+  height: 70px;
+  color: #777;
+}
+
+.head-center {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 70px;
+}
+
+/*================= Navegacion de la barra =================*/
+
+.nav-center {
+    height: 70px;
+    float: left;
+}
+
+.navbar-brand {
+    height: 70px;
+    color: #7fc4ff;
+    font-size: 30px;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+    font-weight: lighter;
+    padding: 9px 0px;
+}
+
+.navbar-brand:hover {
+    height: 70px;
+    color: #337ab7;
+    font-size: 30px;
+
+}
+
+/*================= BOTONES PARA LA PELICULA =================*/
+
+.btn {
+    outline:none;
+}
+
+.btn-movies {
+    padding: 0;
+    border: none;
+    background: transparent;
+    max-height: 314px;
+    outline:none;
+}
+
+.btn-img{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    height: auto;
+    cursor: pointer;
+    height: 260px;
+    max-width: 100%;
+}
+
+.btn-border {
+    border-radius: 0 0 6px 6px;
+}
+
+   
+
+.btn-capitulos {
+    padding: 0;
+    border: none;
+    background: transparent;
+    max-height: 314px;
+    outline:none;
+}
+
+.btn-fixed {
+    margin-top: 10px;
+    position: absolute;
+    right: 20px;
+    z-index: 1;
+}
+
+.hover-icon {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    background: rgba(0, 0, 0, 0.87);    
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+    font-weight: lighter;
+    padding: 10px;
+}
+
+
+/*================= PIE DE PAGINA =================*/
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background-color: #1c1c1f;
+}
+
+.separador {
+    padding-bottom: 40px;
+}
+
+body > .container {
+  padding: 60px 15px 0;
+}
+.container .text-muted {
+  margin-top: 10px;
+  clear:left;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+code {
+  font-size: 80%;
+}
+
+/*================= BOTONERA GENERAL =================*/
+
+.b-min {
+  background-color: transparent;
+  border: transparent;
+}
+
+.b-color {
+    background-color: #337ab7;
+    border: 1px solid #337ab7;
+    color: #fff;
+}
+
+.btn-lg {
+    margin-bottom: 10px;
+}
+
+/*================= CSS PARA EL LOGIN =================*/
+
+
+.c-login {
+    margin: auto;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-login{
+    margin:auto;
+    height:auto;
+    width: 30%;
+    color:#777;
+    padding: 10px;
+
+}
+
+.detalles-w {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*================= CSS DE BOOSTRAP EDITADOS =================*/
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.btn-modify {
+    height: 43px;
+    color: #777;
+    font-size:20px;
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    border: medium none;
+    border-left:none;
+    background:#121314;
+    border-radius: 0 4px 4px 0;
+}
+
+.btn-load {
+    height: 44px;
+    font-size:20px;
+    background:#fff;
+    border: medium none;
+}
+
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 15px 15px;
+    font-size: large;
+    margin-bottom: -1px;
+    font-weight: lighter;
+    -webkit-font-smoothing: antialiased;
+    background: none;
+    border: none;
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 1;
+}
+
+.play-item {
+    list-style-type:decimal; 
+    display: list-item;
+    cursor: pointer;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: transparent;
+    border-radius: 0px;
+}
+
+.bootbox-body {
+    color :#555;
+}
+
+.navbar-form {
+    margin-top: 13px;
+    margin-bottom: 0px;
+}
+
+.navbar-nav {
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.navbar-nav > li > a {
+    color: #777;
+}
+
+.thumbnail-mv { 
+    min-height: 100px;
+}
+
+.thumbnail {
+    padding:0px;
+    background: none;
+    border:none;
+}
+
+.thumbnail .caption {
+    padding-top: 0px; 
+    color: #333;
+}
+
+/**Movies**/
+
+
+.atras {
+    border-radius:4px;
+}
+
+.sobre_img {
+    margin: auto;
+    width: 100%;
+    height: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sobre {
+    position: absolute;
+    z-index: 2;
+    background-color: #777;
+    opacity: 0.9;
+    padding: 10px;
+    display: none;
+    font-size: 150px;
+    border-radius:4px;
+}
+
+.play {
+    text-align: center;
+    color:#fff;
+}
+
+.video-detalles {
+     width:100%; height:370px;
+     border:none;
+}
+
+.video-capitulo {
+     width:100%; height:85%;
+     border:none;
+}
+
+.video-movie {
+     width:100%; height:370px;
+     border:none;
+}
+
+.m-container {
+    display: none;
+    height:100%; 
+    width: 100%;
+    background: #121314; 
+    color: #fff;
+    position: fixed;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.m-series {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    height:100%; 
+    background: rgba(28, 28, 31, 1);
+    color: #fff;
+    z-index: 2;
+}
+
+.m-capitulo {
+    position: fixed;
+    top: 0;
+    left: 30%;
+    display: none;
+    height:100%; 
+    background: rgba(28, 28, 31, 0.90);
+    color: #fff;
+    z-index: 2;
+}
+
+.text-fluid{
+    margin-left: 5px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.text-style {
+    font-size: 30px;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+    font-weight: lighter;
+    color: #fff;
+}
+
+.slider-detalles {
+    position:fixed; bottom:0; margin-left:10px;
+}
+/*================= GENEROS =================*/
+
+.text-genero {
+    text-align: center;
+    font-size: 20px;
+    margin: 5px;
+    background: #212121;
+}
+/*================= INPUTS DE BUSQUEDA =================*/
+
+#searchs {
+    color:#333;
+    background:rgba(237, 237, 237, 0.1);
+    height: auto;
+    clear: left;
+    padding-top: 10px;
+    display: none;
+    height: 390px;
+}
+
+
+
+.t-busqueda {
+    max-width:234px; float:left; margin-left:5px; margin-right:5px;
+}
+
+.t-img {
+    max-height:314px; max-width:234px;
+}
+
+
+.form-search {
+    border: medium none;
+    padding: 0px;
+    outline: medium none;
+    -moz-box-sizing: border-box;
+    overflow: hidden;
+    unicode-bidi: isolate;
+    line-height: 0;
+    white-space: nowrap;
+    text-align: left;
+    color: #888;
+    padding-left: 10px; 
+    font-size: 16px;
+    height: 43px;
+    width: 582px;
+    border-radius: 4px 0 0 4px;
+    transition: box-shadow 200ms cubic-bezier(0.4, 0.0, 0.2, 1);
+    border-right:none;
+    background: #121314;
+}
+
+/*============== CARRUSEL ============*/
+
+.slider {
+    height: auto;
+    width: 100%;
+    margin: auto;
+}
+
+.slick-slide {
+      margin: 0px 5px;
+}
+
+.slick-slide img {
+      width: 100%;
+}
+
+.slick-prev:before, .slick-next:before {
+        color: white;
+}
+
+.slick-slider {
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+
+.slick-list:focus {
+    outline: none;
+}
+
+.slick-list.dragging {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track, .slick-slider .slick-list {
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+}
+
+.slick-track:before, .slick-track:after {
+    display: table;
+    content: '';
+}
+
+.slick-track:after {
+    clear: both;
+}
+
+.slick-loading .slick-track {
+    visibility: hidden;
+}
+
+.slick-slide {
+    display: none;
+    float: left;
+    height: auto;
+    min-height: 1px;
+}
+
+[dir='rtl'] .slick-slide {
+    float: right;
+}
+
+.slick-slide img {
+    display: block;
+}
+
+.slick-slide.slick-loading img {
+    display: none;
+}
+
+.slick-slide.dragging img {
+    pointer-events: none;
+}
+
+.slick-initialized .slick-slide {
+    display: block;
+}
+
+.slick-loading .slick-slide {
+    visibility: hidden;
+}
+
+.slick-vertical .slick-slide {
+    display: block;
+    height: auto;
+    border: 1px solid transparent;
+}
+
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/*============== Backend screen ============*/
+
+
+.navbar-backend {
+    -webkit-transition: 0.6s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -moz-transition: 0.6s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -o-transition: 0.6s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    -ms-transition: 0.6s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition: 0.6s all cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    overflow: hidden;
+}
+.navbar-backend {
+    width: 400px;
+    position: fixed;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    min-height: 100%;
+    padding-top: 0px;
+    z-index: 1;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    color: white;
+    background-color: #232A31;
+    background-image: -webkit-linear-gradient(352deg, #322641, #2A333C);
+    background-image: -moz-linear-gradient(352deg, #322641, #2A333C);
+    background-image: -o-linear-gradient(352deg, #322641, #2A333C);
+    background-image: -ms-linear-gradient(352deg, #322641, #2A333C);
+    background-image: linear-gradient(352deg, #322641, #2A333C);
+}
+
+.navbar-backend #head-bar {
+}
+
+.navbar-backend #head-bar .head-settings {
+    position: absolute;
+    color: #8A91A2;
+    right: 0px;
+    font-size: 29px;
+    text-decoration: none;
+    padding: 24px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar-backend .head-logo {
+    background-color: #1c1c1f;
+    padding: 20px;
+    margin-bottom: 30px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-backend .head-logo img {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    vertical-align: inherit;
+}
+
+.navbar-backend .head-logo span {
+    vertical-align: 39%;
+    font-size: 27px;
+}
+
+.navbar-backend #head-bar .head-modes {
+    padding-left: 29px;
+}
+
+.navbar-backend #head-bar .head-modes .head-mode.active {
+    font-size: 90%;
+    border-bottom: 1px solid #83EFFF;
+    color: #83EFFF;
+    opacity: 1;
+}
+
+.navbar-backend #head-bar .head-modes .head-mode {
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px;
+    background-color: rgba(0,0,0,0);
+    outline: 5px solid rgba(0,0,0,0);
+    font-size: 80%;
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+.navbar-backend h2 {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px;
+    padding-left: 45px;
+    opacity: 0.4;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+#navbar-list .navbar-list {
+    width: 400px;
+}
+
+#navbar-list {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+    height: 100%;
+    float: left;
+    padding-bottom: 230px;
+}
+
+.navbar-list {
+    margin-bottom: 40px;
+}
+
+.navbar-list .list-site {
+    border-bottom: 1px solid #3D444B;
+    position: relative;
+}
+
+.navbar-list .list-site .list-circle {
+    pointer-events: none;
+    position: absolute;
+    margin-top: 17px;
+    margin-left: 27px;
+    font-size: 12px;
+    font-family: Verdana;
+}
+
+.list-circle {
+    display: inline-block;
+    margin-left: 17px;
+    vertical-align: -5px;
+}
+
+.navbar-list .list-site .list-inner {
+    color: #C2CBDB;
+    text-decoration: none;
+    display: block;
+    padding: 15px 25px;
+    padding-left: 45px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.navbar-list .list-site .list-inner .list-title {
+    max-width: 157px;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: -4px;
+}
+
+#navbar-list .list-details {
+    -webkit-transition: all 0.6s;
+    -moz-transition: all 0.6s;
+    -o-transition: all 0.6s;
+    -ms-transition: all 0.6s;
+    transition: all 0.6s;
+}
+
+.navbar-list .list-site .list-inner .list-details {
+    float: right;
+    display: inline;
+    font-size: 11px;
+    text-transform: uppercase;
+    line-height: 23px;
+    opacity: 0.8;
+    background-color: #17161F;
+    padding: 2px 10px;
+    margin-top: -4px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -o-border-radius: 16px;
+    -ms-border-radius: 16px;
+    border-radius: 16px;
+}
+
+.navbar-list .list-site .list-settings {
+    position: absolute;
+    padding: 12px;
+    right: 0px;
+    top: -1px;
+    color: white;
+    text-decoration: none;
+    opacity: 0;
+    font-size: 22px;
+}
+
+/*============== Right Backend ============*/
+
+
+
+#right-bar {
+}
+
+#right-bar .right-settings {
+    position: absolute;
+    color: #8A91A2;
+    right: 0px;
+    font-size: 29px;
+    text-decoration: none;
+    padding: 24px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.right-logo {
+    background-color: #1c1c1f;
+    padding: 20px;
+    margin-bottom: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+.right-logo img {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    vertical-align: inherit;
+}
+
+.right-logo span {
+    vertical-align: 39%;
+    font-size: 27px;
+}
+
+.right-text {
+    padding: 3px 0px 12px;
+    font-size: 27px;
+}
+
+#right-bar .right-modes {
+    padding-left: 29px;
+}
+
+#right-bar .right-modes .right-mode.active {
+    font-size: 90%;
+    border-bottom: 1px solid #83EFFF;
+    color: #83EFFF;
+    opacity: 1;
+}
+
+#right-bar .right-modes .right-mode {
+    padding: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 10px;
+    background-color: rgba(0,0,0,0);
+    outline: 5px solid rgba(0,0,0,0);
+    font-size: 80%;
+    text-decoration: none;
+    color: white;
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+
+#right-bar h2 {
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 10px;
+    padding-left: 45px;
+    opacity: 0.4;
+    letter-spacing: 1px;
+    margin-top: 40px;
+}
+
+/* INPUTS ------------------------------------------------------------------------------------------->*/
+
+.input-textarea {
+    width: 100%; max-width: 100%; min-width: 100%;
+    height: 200px; min-height: 200px;
+    border: 0.5px solid #97989b; border-radius: 6px;
+    padding-left: 10px; padding-top: 5px;
+    font-size: 14px; color:#222;
+}
+
+
+.input-file {
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    border-width: medium medium 1px;
+    text-align: center;
+    font-size: 14px;
+    height: 100%;
+    width: 99.5%;
+    margin-right: 8px;
+    margin-bottom: 20px;
+    background: transparent;
+    color: #888;
+    border: 1px solid #888;
+    border-radius: 6px;
+    padding-top: 10px;
+}
+.input-file p{
+    font-size: 12px; color:#888;
+    margin-left: 1px;
+    margin-top: 5px;
+}
+.input-file:hover {
+    background-color:transparent; border: 1px dashed #cc3641;
+}
+.input-file input[type=file] {
+    margin:0; padding:0; outline:0;
+    font-size:10000px; border:10000px solid transparent; opacity:0px;
+    position:absolute; right:-1000px; top:-1000px; cursor:pointer;
+}
+.input-portada {
+    background: #1c1c1f; float: left; border-radius:6px; width: 95.5%; padding:5px; margin-bottom:10px; color:#fff; 
+}
+.input-portada-textlow {
+    background: #1c1c1f; float: left; border-radius:6px; height:120px; width: 95.5%; padding:10px; margin-bottom:10px; color:#fff;
+}
+.input-portada-textarea {
+    background: #1c1c1f; float: left; border-radius:6px; height:250px; width: 95.5%; padding:5px; margin-bottom:10px; color:#fff;
+
+}
+.input-portada-textlow p{
+    font-size: 12px; color:#888;
+    margin-left: 1px;
+    margin-top: 5px;
+}
+.input-portada-textarea p{
+    font-size: 12px; color:#888;
+    margin-left: 1px;
+    margin-top: 5px;
+}
+
+
+/*============== MEDIA SCREEN ============*/
+
+@media (min-width: 992px) and (max-width: 1190px) {
+
+    #searchs {
+        height: 470px;
+    }
+
+    .b-login{
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .form-search {
+    width: 450px;
+    }
+
+    #searchs {
+        height: 280px;
+    }
+
+    .b-login{
+        width: 70%;
+    }
+
+    .t-img {
+    max-height:314px; max-width:234px;
+    }
+
+    .thumbnail > img, .thumbnail a > img {
+       height: 200px; 
+    }
+
+    .slider-detalles {
+        display:none;
+    }
+
+    .detalles-w {
+        height: 50%;
+    }
+}
+
+@media (max-width: 790px) {
+  .form-search {
+    width: 100%;
+    padding-left: 20px;
+  }
+
+  .head-bar {
+    height: 140px;
+  }
+
+   .navbar-form {
+    padding: 0;
+    margin-top: 0px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-bottom: 0;
+   }
+
+   .navbar-nav {
+        display: none;
+   }
+
+   .head-center {
+        padding-right: 0;
+        padding-left: 0;
+        margin-right: auto;
+        margin-left: auto;
+        height: 140px;
+    }
+
+     #searchs {
+        height: auto;
+    }
+
+    .b-login{
+        width: 90%;
+    }
+
+    .thumbnail_img {
+        height: 110px;
+        border-radius:4px;
+    }
+
+    .m-container {
+        height:100%; 
+        position: absolute;
+    }
+
+    .rep-movie {
+        margin-top: 10px;
+    }
+
+    .rep-trailer {
+        margin-top: 10px;
+    }
+
+    .navbar-form {
+        padding: 0; 
+        margin: 0; 
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .navbar-brand {
+        padding: 9px 10px;
+    }
+
+    .video-detalles {
+     width:100%; height:330px;
+    }
+
+    .video-capitulo {
+     width:100%; height:330px;
+    }
+
+    .video-movie {
+     width:100%; height:auto;
+    }
+
+    .hover-icon {
+        position: absolute;
+        top: 0;
+        font-size: 16px;
+        background: rgba(0, 0, 0, 0.63);
+        font-family: Roboto, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Oxygen", "Ubuntu", "Cantarell", "Open Sans", sans-serif;
+        font-weight: lighter;
+        padding: 5px;
+    }
+
+    .slider-detalles {
+        display:none;
+    }
+
+}
+@media (max-width: 520px) {
+    .slider-detalles {
+        display:none;
+    }
+
+}

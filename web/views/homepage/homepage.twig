@@ -1,0 +1,44 @@
+{% extends "layout/default_layout.twig" %}
+
+{% block body %}
+
+<div class="container-fluid" style="padding:0;">
+<ul class="pgwSlider">
+{% for slider in sliders %}
+    <li><button type="button" class="btn-movies detalles" value="{{ slider.idpelicula }}"><img src="{{ assets }}img/{{ slider.portada }}" alt="{{ slider.nombre }}"></button></li>
+{% endfor %}
+</ul>
+</div>
+
+<div class="container-fluid">
+	<div class="text-fluid">
+		<h2 class="text-style"><span class="fa fa-play"></span> Peliculas</h2>
+	</div>
+<section class="regular slider">
+	{% for movie in movies %}
+	<div> 
+		<div class="thumbnail">
+			<button style="width:100%;" class="btn-movies detalles" type="button" value="{{ movie.idpelicula }}" role="button"><img src="{{ assets }}img/{{ movie.imagen }}" alt="..." style="max-height:260px;"></button>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+</div>
+<!--
+<div class="container-fluid">
+	<div class="text-fluid">
+		<h2 class="text-style"><span class="fa fa-bomb"></span> Series</h2>
+	</div>
+<section class="regular slider">
+	{% for serie in series %}
+	<div> 
+		<div class="thumbnail">
+			<button style="width:100%;" class="btn-movies btn-serie" type="button" value="{{ serie.idserie }}" role="button"><img src="{{ assets }}img/{{ serie.imagen }}" alt="..." style="max-height:260px;"></button>
+		</div>
+	</div>
+	{% endfor %}
+</section>
+</div>-->
+
+<div class="separador"> </div>
+{% endblock %}

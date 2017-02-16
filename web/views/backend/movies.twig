@@ -1,0 +1,59 @@
+{% extends "layout/backend_layout.twig" %}
+
+{% block content %}
+<style type="text/css">
+
+	
+</style>
+{% if error %}
+<div class="alert alert-danger alert-dismissable fade in">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong>Noticia!</strong> No a seleccionado ninguna pelicula para trabajar
+</div>
+{% endif %}
+<form method="post" action="/backend">
+	<div class="container-fluid" style="padding-left: 400px; padding-right:0;">
+		<div id="right-bar">
+			<div id="example" class="right-settings">
+				<a class="btn btn-primary" title="Añadir" href="/backend/newMovie">
+					<span class="fa fa-plus-square"></span>
+				</a>
+				<button type="submit" class="btn btn-info" title="Agregar nuevo link" name="method" value="newUrl">
+					<span class="fa fa-code-fork"></span>
+				</button>
+				<button type="submit" class="btn btn-warning" title="Editar" name="method" value="editMovie">
+					<span class="fa fa-pencil"></span>
+				</button>
+				<button type="submit" class="btn btn-danger" name="method" title="Eliminar" value="deleteMovie">
+					<span class="fa fa-trash-o"></span>
+				</button>
+			</div>
+			<div class="right-logo">
+				<div class="right-text">Peliculas</div>
+			</div>
+		</div>
+	{% for movie in movies %}
+	<div class="col-md-3">
+		<div class="thumbnail">
+		<img src="{{ assets }}img/{{movie.imagen}}" alt="..." class="btn-img" style="height:300px;">
+	     	<button type="submit" class="btn btn-info btn-block btn-border" name="method" value="viewMovieDetalles">
+	     	 	Detalles
+	    	</button>
+	      	<div class="caption">
+	        	<p><input  style="display:none" type="radio" name="argument" value="{{movie.idpelicula}}"></p>
+	      	</div>
+	    </div>
+    </div>
+    {% endfor %}
+	</div>
+</form>	
+	<script>
+		$(".thumbnail").click(function () {	 
+			if($(this).find('input:radio').prop('checked', true)){
+				$(this).find('img').css('opacity','0.5');
+			}else if($(this).find('input:radio').prop('checked', false)){
+				$(this).find('img').css('opacity','1');
+			}
+		});	
+	</script>   
+{% endblock %}

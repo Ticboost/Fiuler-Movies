@@ -1,0 +1,140 @@
+{% extends "layout/backend_layout.twig" %}
+
+{% block content %}
+{% if id %}
+{% else %}
+{% endif %}
+
+<div class="container-fluid" style="padding-left: 400px; padding-right:0;">
+	<form class="form-horizontal" enctype="multipart/form-data" method="post" action="/backend/newMovie">
+	{% if id or new %}
+	<div id="formPelicula">
+	<div class="col-md-7">
+	<div class="text-fluid">
+		<h2 class="text-style"><span class="fa fa-play"></span> PELICULA</h2>
+	</div>
+	   	<div class="input-portada">
+				<div class="input-file">
+				<input type="file" id="imgPortada" name="portada" />
+					<div class="files" style="margin-bottom:10px;"><span class="fa fa-camera"></span> Selecciona la portada</div>	
+	   		</div>
+	   		<img style="max-height:314px; width:100%;" id="blah2" src="#" alt="your image" />
+	   	</div>
+	   	<div class="input-portada-textlow">
+			<input type="hidden" name="id" value="{{ id }}">
+			<input type="text" class="form-control" name="nombre" placeholder="Titulo de pelicula" value="{{movie.nombre}}" required>
+				<p>Ingresa el titulo de la pelicula , de manera legible y correcta</p>
+		</div>
+		<div class="input-portada-textarea">
+			<textarea cols="50" rows="10" class="form-control" name="sinopsis" required>{{movie.sinopsis}}</textarea>
+				<p>Escribe la sinopsis de la pelicula detallamente, con buena ortografia</p>
+		</div>
+	</div>
+	<div class="col-md-5">
+		<div class="text-fluid">
+			<h2 class="text-style">&nbsp;</h2>
+		</div>
+		<div class="input-portada">
+			<div class="input-file">
+				<input type="file" id="imgInp" name="imagen" />
+				<div class="files" style="margin-bottom:10px;"><span class="fa fa-camera"></span> Seleciona la cartelera</div>
+	   		</div>
+	   		<img style="max-height:314px; width:100%; padding-left:50px; padding-right:50px;" id="blah" src="#" alt="your image" />
+	   	</div>
+	   	<div class="input-portada-textlow">
+			<input type="number" class="form-control" name="prod_ano" min="2000" value="{{movie.prod_ano}}" required>
+			<p>Digita el año en que se produjo esta pelicula, o titulo.</p>
+		</div>
+		<div class="input-portada-textlow">
+			<input type="text" class="form-control" name="trailer" placeholder="http://..." value="{{movie.trailer}}" required>
+				<p>Ingresa la URL embebida del trailer que vas a usar</p>
+		</div>
+	</div>
+	</div>
+	{% endif %}
+	{% if idvideo or new %}
+  	<div id="formDetalles">
+	<div class="col-md-7">
+	<div class="text-fluid">
+		<h2 class="text-style"><span class="fa fa-play"></span> URL DE VIDEO</h2>
+	</div>
+		<div class="input-portada-textlow">
+			<h4>URL</h4>
+				<input type="hidden" name="idvideo" value="{{ id }}">
+				<input type="hidden" name="fecha" value="{{ "now"|date("Y/m/d") }}">
+				<input type="text" class="form-control" name="url" placeholder="http://..." value="{{detalles.url}}" required>
+				<p>Ingresa la url de la pelicula que vas a incrustar</p>
+			</div>
+		<div class="input-portada-textlow">
+			<h4>Estado</h4>
+				<select class="form-control" name="estado">
+					<option value="ACTIVE">Activo</option>
+					<option value="DEACTIVATE">Desactivado</option>
+				</select>
+			</div>
+	  </div>
+	  <div class="col-md-5">
+	  	<div class="text-fluid">
+			<h2 class="text-style">&nbsp;</h2>
+		</div>
+		<div class="input-portada-textlow">
+			<h4>Calidad</h4>
+				<h4 class="col-sm-4"><input type="radio" name="calidad" value="HD" required> HD</h4>
+				<h4 class="col-sm-4"><input type="radio" name="calidad" value="SD" required> SD</h4>
+				<h4 class="col-sm-4"><input type="radio" name="calidad" value="DVD" required> DVD</h4>
+		</div>
+		<div class="input-portada-textlow">
+			<h4>Idioma</h4>
+				<select class="form-control" name="idioma">
+					<option value="Spanish(Español)">Español (España)</option>
+					<option value="Spanish(Mexico)">Español (Mexico)</option>
+					<option value="English(SUB ESP)">Ingles (SUB ESP)</option>
+				</select>
+			</div>
+		</div>
+  	</div>
+  	{% endif %}
+  	<div class="col-md-7" style="margin-bottom:25px;">
+	<button class="btn btn-primary" name="newMovie" value="true">Finalizar</button>
+	</div>
+</form>
+</div>
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $("#blah").hide();
+	  $("#blah2").hide();
+	});
+
+	function readURL(input) {
+	    if (input.files && input.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+	        	$("#blah").fadeIn(1000);
+	            $('#blah').attr('src', e.target.result);
+	        }
+	        reader.readAsDataURL(input.files[0]);
+	    }
+	}
+
+	function readURL2(input) {
+	    if (input.files && input.files[0]) {
+	        var reader = new FileReader();
+	        reader.onload = function (e) {
+	        	$("#blah2").fadeIn(1000);
+	            $('#blah2').attr('src', e.target.result);
+	        }
+	        reader.readAsDataURL(input.files[0]);
+	    }
+	}
+	
+	$("#imgInp").change(function(){
+	    readURL(this);
+	});
+
+	$("#imgPortada").change(function(){
+	    readURL2(this);
+	});
+</script>		    
+{% endblock %}
