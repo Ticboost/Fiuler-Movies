@@ -1,4 +1,5 @@
 <?php 
+/*****YZX0MAKER <www class="twitter com">@YZX0Long | Fiuler is a old repository of movies site*/
 session_start();
 
 use Config\Autoload;
